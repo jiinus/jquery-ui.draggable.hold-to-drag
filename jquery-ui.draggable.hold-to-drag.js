@@ -54,10 +54,6 @@
 
 	mouseProto._touchStart = function(event) {
 
-		if (!this.options.holdToDrag) {
-			return super._touchStart.call(self, event);
-		}
-
 		var self = this;
 
 		// If delay is not defined, just execute and return superclass function
@@ -108,10 +104,6 @@
 
 	mouseProto._touchMove = function(event) {
 
-		if (!this.options.holdToDrag) {
-			return super._touchMove.call(self, event);
-		}
-
 		var self = this;
 
 		// If mouse operation has started (or no delay), execute and return the default superclass function
@@ -141,10 +133,6 @@
 	}
 
 	mouseProto._touchEnd = function(event) {
-
-		if (!this.options.holdToDrag) {
-			return super._touchEnd.call(self, event);
-		}
 
 		var self = this;
 
